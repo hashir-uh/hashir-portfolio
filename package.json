@@ -13,7 +13,8 @@
     "lint": "eslint ./src",
     "setup": "node ./bin/setup.js",
     "e2e:open": "cypress open",
-    "e2e:ci": "DETERMINISTIC=true start-server-and-test serve http://localhost:9000 'percy exec -- cypress run'"
+    "e2e:ci": "DETERMINISTIC=true start-server-and-test serve http://localhost:9000 'percy exec -- cypress run'",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "repository": {
     "type": "git",
@@ -77,6 +78,7 @@
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.12.3",
+    "gh-pages": "^2.1.1",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.0",
     "prettier": "^1.18.2",
